@@ -132,15 +132,17 @@ p { margin: 0 0 1em; }
 .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: var(--header-h); }
 
 .brand {
-  display: inline-flex; align-items: center; gap: 0.65rem;
-  font-family: var(--font-display); font-weight: 600; font-size: 1.3rem; letter-spacing: -0.01em;
-  color: var(--green-ink); text-decoration: none;
+  display: inline-flex; align-items: center; flex: none;
+  color: var(--green-ink); text-decoration: none; white-space: nowrap;
 }
 .brand:hover { color: var(--green-ink); }
-/* LOGO SLOT — assets/images/obst-farm-logo.svg (placeholder until Daniel's clean file arrives).
-   Height is fixed; width follows the logo's own proportions up to --logo-max-w. */
-.brand__logo { height: 44px; width: auto; max-width: var(--logo-max-w, 160px); flex: none; object-fit: contain; }
-.brand__logo--footer { height: 52px; }
+/* WORDMARK — live text in the headline serif. Swap for Daniel's logo file later (see README). */
+.brand__wordmark {
+  font-family: var(--font-display); font-weight: 600; letter-spacing: -0.015em; line-height: 1;
+  font-size: clamp(1.45rem, 1vw + 1.15rem, 1.75rem);
+  font-variation-settings: "opsz" 72;
+}
+.site-footer .brand__wordmark { font-size: 1.9rem; }
 
 .site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.25rem 1.75rem; }
 .site-nav a {

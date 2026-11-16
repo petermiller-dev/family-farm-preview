@@ -67,23 +67,24 @@ top of the photo, not part of the image.
 If the family photo is **not** approved, delete the `<div class="story__media">`
 block in `index.html`; the text column stands on its own.
 
-## Logo
+## Wordmark, logo, and favicon
 
-The header and footer show `assets/images/obst-farm-logo.svg`, currently a
-dashed "OF" placeholder. When Daniel's clean logo file arrives:
+The header and footer show **"Obst Farm" as live text** in the headline serif
+(Fraunces), styled by `.brand__wordmark` in `assets/css/styles.css`. There is
+no image logo yet.
 
-1. Save it as `assets/images/obst-farm-logo.svg` (preferred) and replace the
-   placeholder. If it's only a PNG, export it at least 320 px tall with a
-   transparent background, name it `obst-farm-logo.png`, and change the six
-   `src="…obst-farm-logo.svg"` references (header + footer on each page).
-2. The logo slot is a fixed height (44 px in the header, 52 px in the
-   footer). Width follows the logo's own proportions, capped by
-   `--logo-max-w` (160 px), in `.brand__logo` in `assets/css/styles.css`.
-3. The footer is dark green. If the logo is dark ink on transparent, use a
-   light version there, or give `.brand__logo--footer` a cream background.
-4. If the logo already includes the words "Obst Farm", remove the
-   `<span>Obst Farm</span>` next to it so the name isn't shown twice.
-5. Optionally replace `assets/images/favicon.svg` with a simplified logo mark.
+When Daniel's clean logo file arrives:
+
+1. Save it to `assets/images/` (SVG preferred; otherwise a PNG at least 320 px
+   tall with a transparent background).
+2. In each page's header and footer, put an `<img>` inside `<a class="brand">`
+   before the wordmark, with `width`/`height` set to the file's proportions
+   and `alt=""` (the link already has the name). If the logo includes the words
+   "Obst Farm", replace the `<span class="brand__wordmark">` with the image
+   and use `alt="Obst Farm"` instead.
+3. The footer is dark green, so use a light version of the logo there.
+
+The favicon (`assets/images/favicon.svg`) is a cream serif "O" on deep green.
 
 ## Claims and products to confirm with Daniel
 
