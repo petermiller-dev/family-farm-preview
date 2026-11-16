@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Logo placeholder">
+  <!-- PLACEHOLDER: replace this file with the real Obst Farm logo (same filename). -->
+  <circle cx="60" cy="60" r="57" fill="#f6efe2"/>
+  <circle cx="60" cy="60" r="52" fill="none" stroke="#4f6b52" stroke-width="3" stroke-dasharray="7 6"/>
+  <text x="60" y="73" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="700" fill="#23402f" letter-spacing="1">OF</text>
+</svg>

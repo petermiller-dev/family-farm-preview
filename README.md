@@ -1,12 +1,15 @@
-# family-farm-preview
+# family-farm-preview — Obst Farm
 
-Static website draft for a family farm that sells **eggs and lamb** through
-**local pickup** and **select farmers markets**. Plain HTML, CSS, and a small
+Static website draft for **Obst Farm**, Daniel Obst's family farm in
+**Fort Worth, Texas**, which sells **eggs and lamb** through **local pickup**
+and **select farmers markets**. Plain HTML, CSS, and a small
 progressive-enhancement script — no build step, no dependencies, no ordering
 or payments.
 
 > **Status: preview draft.** Every page carries `<meta name="robots" content="noindex, nofollow">`.
-> "Our Family Farm" is a working name until the farm's real name is confirmed.
+> The homepage headline still reads "Local Eggs & Lamb from Our Family Farm"
+> (the approved working headline); the farm name appears in the header,
+> footer, page titles, and meta descriptions.
 
 ## Structure
 
@@ -64,6 +67,33 @@ top of the photo, not part of the image.
 If the family photo is **not** approved, delete the `<div class="story__media">`
 block in `index.html`; the text column stands on its own.
 
+## Logo
+
+The header and footer show `assets/images/obst-farm-logo.svg`, currently a
+dashed "OF" placeholder. When Daniel's clean logo file arrives:
+
+1. Save it as `assets/images/obst-farm-logo.svg` (preferred) and replace the
+   placeholder. If it's only a PNG, export it at least 320 px tall with a
+   transparent background, name it `obst-farm-logo.png`, and change the six
+   `src="…obst-farm-logo.svg"` references (header + footer on each page).
+2. The logo slot is a fixed height (44 px in the header, 52 px in the
+   footer). Width follows the logo's own proportions, capped by
+   `--logo-max-w` (160 px), in `.brand__logo` in `assets/css/styles.css`.
+3. The footer is dark green. If the logo is dark ink on transparent, use a
+   light version there, or give `.brand__logo--footer` a cream background.
+4. If the logo already includes the words "Obst Farm", remove the
+   `<span>Obst Farm</span>` next to it so the name isn't shown twice.
+5. Optionally replace `assets/images/favicon.svg` with a simplified logo mark.
+
+## Claims and products to confirm with Daniel
+
+The farm card mentions **grass-fed** and **pasture-raised**. The site
+doesn't use either claim yet. Before adding them, Daniel should confirm which
+product each one applies to (eggs, lamb, or both). Comments marking the
+spots are in `index.html` (above the tiles) and `eggs-and-lamb/index.html`
+(`EGG DETAILS` / `LAMB DETAILS`). Any other products on the card stay off the
+site until Daniel confirms them; the site leads with eggs and lamb only.
+
 ## Updating market dates (one place)
 
 Market dates live **only** in `pickup-and-markets/index.html`, between the
@@ -77,9 +107,9 @@ Other marked spots for confirmed details:
 - `EGG DETAILS` / `LAMB DETAILS` comments in `eggs-and-lamb/index.html` —
   quantities, cuts, prices, availability.
 - `PICKUP DETAILS` comment in `pickup-and-markets/index.html` — pickup
-  instructions, hours, address (only if the farmer wants it public), and a
-  call/text link once an approved business number exists.
-- Family and faith wording comment in `index.html` (family story section).
+  instructions, hours, address (only if Daniel wants it public), and a
+  call/text link once Daniel provides an approved business number.
+- Family and faith wording comment in `index.html` ("Meet Daniel Obst" section).
 
 ## Behaviour notes
 
